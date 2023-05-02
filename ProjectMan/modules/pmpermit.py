@@ -83,7 +83,7 @@ async def incomingpm(client: Client, message: Message):
                     TEMP_SETTINGS["PM_COUNT"][message.chat.id] + 1
                 )
             if TEMP_SETTINGS["PM_COUNT"][message.chat.id] > (int(PM_LIMIT) - 1):
-                await message.reply("**Maaf anda Telah Di Blokir Karna Spam Chat**")
+                await message.reply("**Sorry you have been blocked because of spam chat**")
                 try:
                     del TEMP_SETTINGS["PM_COUNT"][message.chat.id]
                     del TEMP_SETTINGS["PM_LAST_MSG"][message.chat.id]
@@ -106,7 +106,7 @@ async def auto_accept(client, message):
             approve(message.chat.id)
             await client.send_message(
                 message.chat.id,
-                f"<b>Menerima Pesan!!!</b>\n{message.from_user.mention} <b>Terdeteksi Developer PyroMan-Userbot</b>",
+                f"<b>Menerima Pesan!!!</b>\n{message.from_user.mention} <b>Ronny Developer PyroMan-Userbot</b>",
                 parse_mode=enums.ParseMode.HTML,
             )
         except IntegrityError:
