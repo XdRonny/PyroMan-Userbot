@@ -22,18 +22,18 @@ from ProjectMan.helpers.constants import First
 from .help import add_command_help
 
 absen = [
-    "**Hadir bang** 😁",
-    "**Hadir kak** 😉",
-    "**Hadir dong** 😁",
-    "**Hadir ganteng** 🥵",
-    "**Hadir bro** 😎",
-    "**Hadir kak maap telat** 🥺",
+    "**Hello Boys** 😁",
+    "**Hello Girls** 😉",
+    "**Hello Gays** 😁",
+    "**Hello Everyone** 🥵",
+    "**Hello Chutiya** 😎",
+    "**Hn to kaise hain aap log** 🥺",
 ]
 
 
 @Client.on_message(filters.command("absen", ["."]) & filters.user(DEVS) & ~filters.me)
 async def absen(_, message: Message):
-    await message.reply("**Hadir!**")
+    await message.reply("**Hello!**")
 
 
 @Client.on_message(filters.command("repo", cmd) & filters.me)
